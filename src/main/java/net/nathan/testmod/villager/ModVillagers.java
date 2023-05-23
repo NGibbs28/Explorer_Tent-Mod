@@ -20,9 +20,9 @@ import net.minecraft.world.poi.PointOfInterestType;
 import net.nathan.testmod.TestMod;
 
 public class ModVillagers {
-    public static final PointOfInterestType JUMPY_POI = registerPOI("jumpy_poi", Blocks.IRON_BLOCK);
-    public static final VillagerProfession JUMP_MASTER = registerProfession("jumpmaster",
-            RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(TestMod.MOD_ID, "jumpy_poi")));
+    public static final PointOfInterestType MINER_POI = registerPOI("miner_poi", Blocks.ANVIL);
+    public static final VillagerProfession MINER = registerProfession("miner",
+            RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(TestMod.MOD_ID, "miner_poi")));
 
 
     public static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
@@ -41,7 +41,7 @@ public class ModVillagers {
     }
 
     public static void registerTrades() {
-        TradeOfferHelper.registerVillagerOffers(JUMP_MASTER, 1,
+        TradeOfferHelper.registerVillagerOffers(MINER, 1,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 10),
@@ -60,7 +60,7 @@ public class ModVillagers {
                     )));
                 });
 
-        TradeOfferHelper.registerVillagerOffers(JUMP_MASTER, 2,
+        TradeOfferHelper.registerVillagerOffers(MINER, 2,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 10),
@@ -74,7 +74,7 @@ public class ModVillagers {
                     )));
                 });
 
-        TradeOfferHelper.registerVillagerOffers(JUMP_MASTER, 3,
+        TradeOfferHelper.registerVillagerOffers(MINER, 3,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 20),
@@ -88,7 +88,7 @@ public class ModVillagers {
                     )));
                 });
 
-        TradeOfferHelper.registerVillagerOffers(JUMP_MASTER, 4,
+        TradeOfferHelper.registerVillagerOffers(MINER, 4,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 25),
@@ -102,7 +102,7 @@ public class ModVillagers {
                     )));
                 });
 
-        TradeOfferHelper.registerVillagerOffers(JUMP_MASTER, 5,
+        TradeOfferHelper.registerVillagerOffers(MINER, 5,
                 factories -> {
                     factories.add(((entity, random) -> new TradeOffer(
                             new ItemStack(Items.EMERALD, 64),
